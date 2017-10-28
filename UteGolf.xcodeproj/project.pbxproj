@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0559E69F26C9D05B2E0E788A /* Pods_UteGolfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D71280FBEC143D8AE8F4E5 /* Pods_UteGolfTests.framework */; };
+		3901696B0D7E9D598C200035 /* Pods_UteGolf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3B9A77C70FBCCB90154F /* Pods_UteGolf.framework */; };
 		5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */; };
 		5E19DCDE1F96A2DF007D057E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCDD1F96A2DF007D057E /* ViewController.swift */; };
 		5E19DCE11F96A2DF007D057E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E19DCDF1F96A2DF007D057E /* Main.storyboard */; };
@@ -14,6 +16,12 @@
 		5E19DCE61F96A2DF007D057E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E19DCE41F96A2DF007D057E /* LaunchScreen.storyboard */; };
 		5E19DCF11F96A2E0007D057E /* UteGolfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCF01F96A2E0007D057E /* UteGolfTests.swift */; };
 		5E19DCFC1F96A2E0007D057E /* UteGolfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCFB1F96A2E0007D057E /* UteGolfUITests.swift */; };
+		5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */; };
+		5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3451F9E675F00E42A27 /* AppState.swift */; };
+		5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3471F9E697C00E42A27 /* LoginPage.swift */; };
+		5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3491F9E7AB700E42A27 /* User.swift */; };
+		5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52EF3A1F98319A00C0A249 /* EventCell.swift */; };
+		682D1A7D5F8724487B67F872 /* Pods_UteGolfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630FC9BD36CD3282D4C83C9 /* Pods_UteGolfUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27D71280FBEC143D8AE8F4E5 /* Pods_UteGolfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UteGolfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B02ABA3E81427E012422467 /* Pods-UteGolfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5630FC9BD36CD3282D4C83C9 /* Pods_UteGolfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UteGolfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E19DCD81F96A2DF007D057E /* UteGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UteGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E19DCDD1F96A2DF007D057E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,17 @@
 		5E19DCF71F96A2E0007D057E /* UteGolfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UteGolfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E19DCFB1F96A2E0007D057E /* UteGolfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UteGolfUITests.swift; sourceTree = "<group>"; };
 		5E19DCFD1F96A2E0007D057E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		5E39F3451F9E675F00E42A27 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5E39F3471F9E697C00E42A27 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		5E39F3491F9E7AB700E42A27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5E52EF3A1F98319A00C0A249 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		B64D63E0740EF14718EB7FED /* Pods-UteGolfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BBE46E0EC4933EED66319D59 /* Pods-UteGolf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf.debug.xcconfig"; sourceTree = "<group>"; };
+		C517A6072A4E9B1B4EDE09C7 /* Pods-UteGolfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfTests/Pods-UteGolfTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA9F3B9A77C70FBCCB90154F /* Pods_UteGolf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UteGolf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E05CCFC8271F37D8A6A9AC84 /* Pods-UteGolfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfTests/Pods-UteGolfTests.release.xcconfig"; sourceTree = "<group>"; };
+		E09E850A6A12DCB060C1AC36 /* Pods-UteGolf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolf.release.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3901696B0D7E9D598C200035 /* Pods_UteGolf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0559E69F26C9D05B2E0E788A /* Pods_UteGolfTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682D1A7D5F8724487B67F872 /* Pods_UteGolfUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,8 @@
 				5E19DCEF1F96A2E0007D057E /* UteGolfTests */,
 				5E19DCFA1F96A2E0007D057E /* UteGolfUITests */,
 				5E19DCD91F96A2DF007D057E /* Products */,
+				95ADEC505E155248D07D4500 /* Pods */,
+				F1A459B64FA313A2B1899741 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +124,17 @@
 		5E19DCDA1F96A2DF007D057E /* UteGolf */ = {
 			isa = PBXGroup;
 			children = (
+				5E39F3451F9E675F00E42A27 /* AppState.swift */,
 				5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */,
+				5E39F3471F9E697C00E42A27 /* LoginPage.swift */,
+				5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */,
+				5E52EF3A1F98319A00C0A249 /* EventCell.swift */,
 				5E19DCDD1F96A2DF007D057E /* ViewController.swift */,
 				5E19DCDF1F96A2DF007D057E /* Main.storyboard */,
 				5E19DCE21F96A2DF007D057E /* Assets.xcassets */,
 				5E19DCE41F96A2DF007D057E /* LaunchScreen.storyboard */,
 				5E19DCE71F96A2DF007D057E /* Info.plist */,
+				5E39F3491F9E7AB700E42A27 /* User.swift */,
 			);
 			path = UteGolf;
 			sourceTree = "<group>";
@@ -125,6 +157,29 @@
 			path = UteGolfUITests;
 			sourceTree = "<group>";
 		};
+		95ADEC505E155248D07D4500 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBE46E0EC4933EED66319D59 /* Pods-UteGolf.debug.xcconfig */,
+				E09E850A6A12DCB060C1AC36 /* Pods-UteGolf.release.xcconfig */,
+				C517A6072A4E9B1B4EDE09C7 /* Pods-UteGolfTests.debug.xcconfig */,
+				E05CCFC8271F37D8A6A9AC84 /* Pods-UteGolfTests.release.xcconfig */,
+				4B02ABA3E81427E012422467 /* Pods-UteGolfUITests.debug.xcconfig */,
+				B64D63E0740EF14718EB7FED /* Pods-UteGolfUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1A459B64FA313A2B1899741 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3B9A77C70FBCCB90154F /* Pods_UteGolf.framework */,
+				27D71280FBEC143D8AE8F4E5 /* Pods_UteGolfTests.framework */,
+				5630FC9BD36CD3282D4C83C9 /* Pods_UteGolfUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E19DD001F96A2E0007D057E /* Build configuration list for PBXNativeTarget "UteGolf" */;
 			buildPhases = (
+				CB90452FBC275C351AF5B80E /* [CP] Check Pods Manifest.lock */,
 				5E19DCD41F96A2DF007D057E /* Sources */,
 				5E19DCD51F96A2DF007D057E /* Frameworks */,
 				5E19DCD61F96A2DF007D057E /* Resources */,
+				5E6064A4ACB7202E33BEB6D2 /* [CP] Embed Pods Frameworks */,
+				E6492608F3FF64A5C5BFCA18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E19DD031F96A2E0007D057E /* Build configuration list for PBXNativeTarget "UteGolfTests" */;
 			buildPhases = (
+				E940165BA110EDC7AD716BD7 /* [CP] Check Pods Manifest.lock */,
 				5E19DCE81F96A2E0007D057E /* Sources */,
 				5E19DCE91F96A2E0007D057E /* Frameworks */,
 				5E19DCEA1F96A2E0007D057E /* Resources */,
+				FF72FC87BD4422D0B58F6A58 /* [CP] Embed Pods Frameworks */,
+				2300FA5981B20E1C796C6DDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E19DD061F96A2E0007D057E /* Build configuration list for PBXNativeTarget "UteGolfUITests" */;
 			buildPhases = (
+				58B246506497689F9003BB28 /* [CP] Check Pods Manifest.lock */,
 				5E19DCF31F96A2E0007D057E /* Sources */,
 				5E19DCF41F96A2E0007D057E /* Frameworks */,
 				5E19DCF51F96A2E0007D057E /* Resources */,
+				1936E035E4907DC6120BA2F1 /* [CP] Embed Pods Frameworks */,
+				182CAEBA124ACE1113F71C9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +318,168 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		182CAEBA124ACE1113F71C9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1936E035E4907DC6120BA2F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2300FA5981B20E1C796C6DDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolfTests/Pods-UteGolfTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58B246506497689F9003BB28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UteGolfUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E6064A4ACB7202E33BEB6D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB90452FBC275C351AF5B80E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UteGolf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6492608F3FF64A5C5BFCA18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E940165BA110EDC7AD716BD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UteGolfTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF72FC87BD4422D0B58F6A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UteGolfTests/Pods-UteGolfTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E19DCD41F96A2DF007D057E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */,
+				5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */,
+				5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */,
 				5E19DCDE1F96A2DF007D057E /* ViewController.swift in Sources */,
+				5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */,
 				5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */,
+				5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +643,7 @@
 		};
 		5E19DD011F96A2E0007D057E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE46E0EC4933EED66319D59 /* Pods-UteGolf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +658,7 @@
 		};
 		5E19DD021F96A2E0007D057E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E09E850A6A12DCB060C1AC36 /* Pods-UteGolf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +673,7 @@
 		};
 		5E19DD041F96A2E0007D057E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C517A6072A4E9B1B4EDE09C7 /* Pods-UteGolfTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +690,7 @@
 		};
 		5E19DD051F96A2E0007D057E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05CCFC8271F37D8A6A9AC84 /* Pods-UteGolfTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +707,7 @@
 		};
 		5E19DD071F96A2E0007D057E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B02ABA3E81427E012422467 /* Pods-UteGolfUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +723,7 @@
 		};
 		5E19DD081F96A2E0007D057E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64D63E0740EF14718EB7FED /* Pods-UteGolfUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
