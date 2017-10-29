@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = LoginPage()
+        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        
+        window?.rootViewController = loginVC
         
         return true
     }

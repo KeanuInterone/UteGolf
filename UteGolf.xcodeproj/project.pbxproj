@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		0559E69F26C9D05B2E0E788A /* Pods_UteGolfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D71280FBEC143D8AE8F4E5 /* Pods_UteGolfTests.framework */; };
 		3901696B0D7E9D598C200035 /* Pods_UteGolf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3B9A77C70FBCCB90154F /* Pods_UteGolf.framework */; };
+		5E02927C1FA4F3D800219C20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02927A1FA4F3D800219C20 /* LoginViewController.swift */; };
+		5E02927D1FA4F3D800219C20 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E02927B1FA4F3D800219C20 /* LoginViewController.xib */; };
+		5E0292801FA50CD500219C20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02927E1FA50CD500219C20 /* ProfileViewController.swift */; };
+		5E0292811FA50CD500219C20 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E02927F1FA50CD500219C20 /* ProfileViewController.xib */; };
+		5E0292841FA57DB300219C20 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0292821FA57DB300219C20 /* EventCollectionViewCell.swift */; };
+		5E0292851FA57DB300219C20 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0292831FA57DB300219C20 /* EventCollectionViewCell.xib */; };
+		5E0292881FA592BF00219C20 /* EventHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0292861FA592BF00219C20 /* EventHeaderCollectionViewCell.swift */; };
+		5E0292891FA592BF00219C20 /* EventHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0292871FA592BF00219C20 /* EventHeaderCollectionViewCell.xib */; };
 		5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */; };
-		5E19DCDE1F96A2DF007D057E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCDD1F96A2DF007D057E /* ViewController.swift */; };
 		5E19DCE11F96A2DF007D057E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E19DCDF1F96A2DF007D057E /* Main.storyboard */; };
 		5E19DCE31F96A2DF007D057E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E19DCE21F96A2DF007D057E /* Assets.xcassets */; };
 		5E19DCE61F96A2DF007D057E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E19DCE41F96A2DF007D057E /* LaunchScreen.storyboard */; };
@@ -45,9 +52,16 @@
 		27D71280FBEC143D8AE8F4E5 /* Pods_UteGolfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UteGolfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B02ABA3E81427E012422467 /* Pods-UteGolfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5630FC9BD36CD3282D4C83C9 /* Pods_UteGolfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UteGolfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E02927A1FA4F3D800219C20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5E02927B1FA4F3D800219C20 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5E02927E1FA50CD500219C20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5E02927F1FA50CD500219C20 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		5E0292821FA57DB300219C20 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E0292831FA57DB300219C20 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		5E0292861FA592BF00219C20 /* EventHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E0292871FA592BF00219C20 /* EventHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		5E19DCD81F96A2DF007D057E /* UteGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UteGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E19DCDD1F96A2DF007D057E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E19DCE01F96A2DF007D057E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E19DCE21F96A2DF007D057E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E19DCE51F96A2DF007D057E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +113,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E0292771FA4F1E900219C20 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */,
+				5E39F3471F9E697C00E42A27 /* LoginPage.swift */,
+				5E02927A1FA4F3D800219C20 /* LoginViewController.swift */,
+				5E02927B1FA4F3D800219C20 /* LoginViewController.xib */,
+				5E02927E1FA50CD500219C20 /* ProfileViewController.swift */,
+				5E02927F1FA50CD500219C20 /* ProfileViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E0292781FA4F1F900219C20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E39F3491F9E7AB700E42A27 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E0292791FA4F20800219C20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E52EF3A1F98319A00C0A249 /* EventCell.swift */,
+				5E0292821FA57DB300219C20 /* EventCollectionViewCell.swift */,
+				5E0292831FA57DB300219C20 /* EventCollectionViewCell.xib */,
+				5E0292861FA592BF00219C20 /* EventHeaderCollectionViewCell.swift */,
+				5E0292871FA592BF00219C20 /* EventHeaderCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5E19DCCF1F96A2DF007D057E = {
 			isa = PBXGroup;
 			children = (
@@ -126,15 +173,13 @@
 			children = (
 				5E39F3451F9E675F00E42A27 /* AppState.swift */,
 				5E19DCDB1F96A2DF007D057E /* AppDelegate.swift */,
-				5E39F3471F9E697C00E42A27 /* LoginPage.swift */,
-				5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */,
-				5E52EF3A1F98319A00C0A249 /* EventCell.swift */,
-				5E19DCDD1F96A2DF007D057E /* ViewController.swift */,
+				5E0292771FA4F1E900219C20 /* Controllers */,
+				5E0292791FA4F20800219C20 /* Views */,
+				5E0292781FA4F1F900219C20 /* Models */,
 				5E19DCDF1F96A2DF007D057E /* Main.storyboard */,
 				5E19DCE21F96A2DF007D057E /* Assets.xcassets */,
 				5E19DCE41F96A2DF007D057E /* LaunchScreen.storyboard */,
 				5E19DCE71F96A2DF007D057E /* Info.plist */,
-				5E39F3491F9E7AB700E42A27 /* User.swift */,
 			);
 			path = UteGolf;
 			sourceTree = "<group>";
@@ -296,9 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E02927D1FA4F3D800219C20 /* LoginViewController.xib in Resources */,
 				5E19DCE61F96A2DF007D057E /* LaunchScreen.storyboard in Resources */,
+				5E0292891FA592BF00219C20 /* EventHeaderCollectionViewCell.xib in Resources */,
 				5E19DCE31F96A2DF007D057E /* Assets.xcassets in Resources */,
+				5E0292811FA50CD500219C20 /* ProfileViewController.xib in Resources */,
 				5E19DCE11F96A2DF007D057E /* Main.storyboard in Resources */,
+				5E0292851FA57DB300219C20 /* EventCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,12 +522,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0292881FA592BF00219C20 /* EventHeaderCollectionViewCell.swift in Sources */,
+				5E02927C1FA4F3D800219C20 /* LoginViewController.swift in Sources */,
 				5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */,
 				5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */,
 				5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */,
-				5E19DCDE1F96A2DF007D057E /* ViewController.swift in Sources */,
+				5E0292841FA57DB300219C20 /* EventCollectionViewCell.swift in Sources */,
 				5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */,
 				5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */,
+				5E0292801FA50CD500219C20 /* ProfileViewController.swift in Sources */,
 				5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
