@@ -28,6 +28,9 @@
 		5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3471F9E697C00E42A27 /* LoginPage.swift */; };
 		5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3491F9E7AB700E42A27 /* User.swift */; };
 		5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52EF3A1F98319A00C0A249 /* EventCell.swift */; };
+		5EB6C3E11FA642D9006CA6DE /* ProfileTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C3E01FA642D9006CA6DE /* ProfileTabBarController.swift */; };
+		5EB6C3E41FA64506006CA6DE /* EventsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6C3E21FA64506006CA6DE /* EventsCollectionViewController.swift */; };
+		5EB6C3E51FA64506006CA6DE /* EventsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB6C3E31FA64506006CA6DE /* EventsCollectionViewController.xib */; };
 		682D1A7D5F8724487B67F872 /* Pods_UteGolfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630FC9BD36CD3282D4C83C9 /* Pods_UteGolfUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		5E39F3471F9E697C00E42A27 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5E39F3491F9E7AB700E42A27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E52EF3A1F98319A00C0A249 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		5EB6C3E01FA642D9006CA6DE /* ProfileTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarController.swift; sourceTree = "<group>"; };
+		5EB6C3E21FA64506006CA6DE /* EventsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewController.swift; sourceTree = "<group>"; };
+		5EB6C3E31FA64506006CA6DE /* EventsCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsCollectionViewController.xib; sourceTree = "<group>"; };
 		B64D63E0740EF14718EB7FED /* Pods-UteGolfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfUITests/Pods-UteGolfUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BBE46E0EC4933EED66319D59 /* Pods-UteGolf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolf/Pods-UteGolf.debug.xcconfig"; sourceTree = "<group>"; };
 		C517A6072A4E9B1B4EDE09C7 /* Pods-UteGolfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UteGolfTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UteGolfTests/Pods-UteGolfTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 				5E02927B1FA4F3D800219C20 /* LoginViewController.xib */,
 				5E02927E1FA50CD500219C20 /* ProfileViewController.swift */,
 				5E02927F1FA50CD500219C20 /* ProfileViewController.xib */,
+				5EB6C3E01FA642D9006CA6DE /* ProfileTabBarController.swift */,
+				5EB6C3E21FA64506006CA6DE /* EventsCollectionViewController.swift */,
+				5EB6C3E31FA64506006CA6DE /* EventsCollectionViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 				5E0292811FA50CD500219C20 /* ProfileViewController.xib in Resources */,
 				5E19DCE11F96A2DF007D057E /* Main.storyboard in Resources */,
 				5E0292851FA57DB300219C20 /* EventCollectionViewCell.xib in Resources */,
+				5EB6C3E51FA64506006CA6DE /* EventsCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,10 +534,12 @@
 			files = (
 				5E0292881FA592BF00219C20 /* EventHeaderCollectionViewCell.swift in Sources */,
 				5E02927C1FA4F3D800219C20 /* LoginViewController.swift in Sources */,
+				5EB6C3E11FA642D9006CA6DE /* ProfileTabBarController.swift in Sources */,
 				5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */,
 				5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */,
 				5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */,
 				5E0292841FA57DB300219C20 /* EventCollectionViewCell.swift in Sources */,
+				5EB6C3E41FA64506006CA6DE /* EventsCollectionViewController.swift in Sources */,
 				5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */,
 				5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */,
 				5E0292801FA50CD500219C20 /* ProfileViewController.swift in Sources */,

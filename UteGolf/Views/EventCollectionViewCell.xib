@@ -34,6 +34,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Wqv-nj-w3L" firstAttribute="leading" secondItem="EJd-3j-LXX" secondAttribute="trailing" constant="8" id="45Q-Uj-JEa"/>
                 <constraint firstAttribute="bottom" secondItem="EJd-3j-LXX" secondAttribute="bottom" id="Aiu-62-nut"/>
