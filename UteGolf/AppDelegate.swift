@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
 //        window?.rootViewController = loginVC
         
-        window?.rootViewController = ProfileTabBarController()
+        AppState.state.nav = UINavigationController(rootViewController: ProfileTabBarController())
+        window?.rootViewController = AppState.state.nav
         
         return true
     }

@@ -24,6 +24,8 @@
 		5E19DCF11F96A2E0007D057E /* UteGolfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCF01F96A2E0007D057E /* UteGolfTests.swift */; };
 		5E19DCFC1F96A2E0007D057E /* UteGolfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DCFB1F96A2E0007D057E /* UteGolfUITests.swift */; };
 		5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */; };
+		5E348CE01FA7928100A0D343 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E348CDE1FA7928100A0D343 /* EventViewController.swift */; };
+		5E348CE11FA7928100A0D343 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E348CDF1FA7928100A0D343 /* EventViewController.xib */; };
 		5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3451F9E675F00E42A27 /* AppState.swift */; };
 		5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3471F9E697C00E42A27 /* LoginPage.swift */; };
 		5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3491F9E7AB700E42A27 /* User.swift */; };
@@ -76,6 +78,8 @@
 		5E19DCFB1F96A2E0007D057E /* UteGolfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UteGolfUITests.swift; sourceTree = "<group>"; };
 		5E19DCFD1F96A2E0007D057E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		5E348CDE1FA7928100A0D343 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		5E348CDF1FA7928100A0D343 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		5E39F3451F9E675F00E42A27 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5E39F3471F9E697C00E42A27 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5E39F3491F9E7AB700E42A27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -126,11 +130,13 @@
 				5E39F3471F9E697C00E42A27 /* LoginPage.swift */,
 				5E02927A1FA4F3D800219C20 /* LoginViewController.swift */,
 				5E02927B1FA4F3D800219C20 /* LoginViewController.xib */,
+				5EB6C3E01FA642D9006CA6DE /* ProfileTabBarController.swift */,
 				5E02927E1FA50CD500219C20 /* ProfileViewController.swift */,
 				5E02927F1FA50CD500219C20 /* ProfileViewController.xib */,
-				5EB6C3E01FA642D9006CA6DE /* ProfileTabBarController.swift */,
 				5EB6C3E21FA64506006CA6DE /* EventsCollectionViewController.swift */,
 				5EB6C3E31FA64506006CA6DE /* EventsCollectionViewController.xib */,
+				5E348CDE1FA7928100A0D343 /* EventViewController.swift */,
+				5E348CDF1FA7928100A0D343 /* EventViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E02927D1FA4F3D800219C20 /* LoginViewController.xib in Resources */,
+				5E348CE11FA7928100A0D343 /* EventViewController.xib in Resources */,
 				5E19DCE61F96A2DF007D057E /* LaunchScreen.storyboard in Resources */,
 				5E0292891FA592BF00219C20 /* EventHeaderCollectionViewCell.xib in Resources */,
 				5E19DCE31F96A2DF007D057E /* Assets.xcassets in Resources */,
@@ -534,6 +541,7 @@
 			files = (
 				5E0292881FA592BF00219C20 /* EventHeaderCollectionViewCell.swift in Sources */,
 				5E02927C1FA4F3D800219C20 /* LoginViewController.swift in Sources */,
+				5E348CE01FA7928100A0D343 /* EventViewController.swift in Sources */,
 				5EB6C3E11FA642D9006CA6DE /* ProfileTabBarController.swift in Sources */,
 				5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */,
 				5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */,

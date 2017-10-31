@@ -17,6 +17,7 @@ class ProfileTabBarController: UITabBarController {
         profileTab.title = "Profile"
         let eventsTab = EventsCollectionViewController(nibName: "EventsCollectionViewController", bundle: nil)
         eventsTab.title = "Events"
+
         
         setViewControllers([profileTab, eventsTab], animated: true)
     }
