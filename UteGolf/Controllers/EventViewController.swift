@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventViewController: UIViewController, UITableViewDataSource {
+class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let roundCellID = "RoundCellID"
     let rounds: [String] = ["Round1", "Round2", "Round3", "Round4"]
@@ -21,7 +21,12 @@ class EventViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         eventNameLabel.text = eventName
+        
+        roundsTabelView.dataSource = self
+        roundsTabelView.delegate = self
+        roundsTabelView.register(UITableViewCell.self, forCellReuseIdentifier: roundCellID)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +40,15 @@ class EventViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = roundName
         
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let roundName = rounds[indexPath.row]
+        
+        let roundVC = RoundViewController(nibName: "RoundViewController", bundle: nil)
+        roundVC.roundName = roundName
+        
+        AppState.state.nav.pushViewController(roundVC, animated: true)
     }
 
 }

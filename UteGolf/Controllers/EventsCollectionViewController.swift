@@ -21,9 +21,6 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
         self.collectionView!.backgroundColor = .white
         // Register cell classes
@@ -31,16 +28,18 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         self.collectionView!.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
     }
 
+    // Number of sections
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return eventTypes.count
     }
 
-
+    // Number of items in section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let eventType = eventTypes[section]
         return (events[eventType]?.count)!
     }
 
+    // Gets gets the headers for the sections
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: eventHeaderID, for: indexPath) as! EventHeaderCollectionViewCell
         
@@ -49,6 +48,7 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         return header
     }
     
+    // Gets the event cells
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellID, for: indexPath) as! EventCollectionViewCell
     
@@ -59,12 +59,25 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         return cell
     }
     
+    // Gets the size for the headers
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30)
     }
     
+    // Gets the size for the event cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 100)
+    }
+    
+    // Event cell was selected
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let eventType = eventTypes[indexPath.section]
+        let eventName = events[eventType]![indexPath.row]
+        
+        let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
+        eventVC.eventName = eventName
+        
+        AppState.state.nav.pushViewController(eventVC, animated: true)
     }
 
     // MARK: UICollectionViewDelegate

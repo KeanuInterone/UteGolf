@@ -26,6 +26,8 @@
 		5E19DD0C1F96A6EC007D057E /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */; };
 		5E348CE01FA7928100A0D343 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E348CDE1FA7928100A0D343 /* EventViewController.swift */; };
 		5E348CE11FA7928100A0D343 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E348CDF1FA7928100A0D343 /* EventViewController.xib */; };
+		5E348CE41FA8DC0200A0D343 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E348CE21FA8DC0200A0D343 /* RoundViewController.swift */; };
+		5E348CE51FA8DC0200A0D343 /* RoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E348CE31FA8DC0200A0D343 /* RoundViewController.xib */; };
 		5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3451F9E675F00E42A27 /* AppState.swift */; };
 		5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3471F9E697C00E42A27 /* LoginPage.swift */; };
 		5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3491F9E7AB700E42A27 /* User.swift */; };
@@ -80,6 +82,8 @@
 		5E19DD0B1F96A6EC007D057E /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		5E348CDE1FA7928100A0D343 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		5E348CDF1FA7928100A0D343 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		5E348CE21FA8DC0200A0D343 /* RoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
+		5E348CE31FA8DC0200A0D343 /* RoundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewController.xib; sourceTree = "<group>"; };
 		5E39F3451F9E675F00E42A27 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5E39F3471F9E697C00E42A27 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5E39F3491F9E7AB700E42A27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				5EB6C3E31FA64506006CA6DE /* EventsCollectionViewController.xib */,
 				5E348CDE1FA7928100A0D343 /* EventViewController.swift */,
 				5E348CDF1FA7928100A0D343 /* EventViewController.xib */,
+				5E348CE21FA8DC0200A0D343 /* RoundViewController.swift */,
+				5E348CE31FA8DC0200A0D343 /* RoundViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				5E19DCE11F96A2DF007D057E /* Main.storyboard in Resources */,
 				5E0292851FA57DB300219C20 /* EventCollectionViewCell.xib in Resources */,
 				5EB6C3E51FA64506006CA6DE /* EventsCollectionViewController.xib in Resources */,
+				5E348CE51FA8DC0200A0D343 /* RoundViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +557,7 @@
 				5EB6C3E41FA64506006CA6DE /* EventsCollectionViewController.swift in Sources */,
 				5E39F3481F9E697C00E42A27 /* LoginPage.swift in Sources */,
 				5E19DCDC1F96A2DF007D057E /* AppDelegate.swift in Sources */,
+				5E348CE41FA8DC0200A0D343 /* RoundViewController.swift in Sources */,
 				5E0292801FA50CD500219C20 /* ProfileViewController.swift in Sources */,
 				5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */,
 			);
