@@ -21,11 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-//        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
-//        window?.rootViewController = loginVC
-        
-        AppState.state.nav = UINavigationController(rootViewController: ProfileTabBarController())
-        window?.rootViewController = AppState.state.nav
+        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        window?.rootViewController = loginVC
         
         return true
     }

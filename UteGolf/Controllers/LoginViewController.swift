@@ -33,10 +33,8 @@ class LoginViewController: UIViewController {
         User.Login(Username: username, Password: password) { (user, message)  in
             
             if let loginUser = user {
-                print(loginUser.FirstName + " " + loginUser.LastName + " " + loginUser.Login)
-                AppState.state.user = user
-                let profileTabController = ProfileTabBarController()
-                AppState.state.nav = UINavigationController(rootViewController: profileTabController)
+                AppState.state.user = loginUser
+                AppState.state.nav = UINavigationController(rootViewController: ProfileTabBarController())
                 self.present(AppState.state.nav, animated: true, completion: nil)
             }
             else {

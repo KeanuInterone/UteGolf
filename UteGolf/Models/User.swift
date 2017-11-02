@@ -35,7 +35,7 @@ class User {
         ]
         
         // All three of these calls are equivalent
-        Alamofire.request("https://www.utahutegolf.com/Users/", method: .post, parameters: parameters).responseJSON { response in
+        Alamofire.request("https://www.utahutegolf.com/users/", method: .post, parameters: parameters).responseJSON { response in
             
             if(response.result.isSuccess) {
                 if let json = response.result.value as? [String: String] {

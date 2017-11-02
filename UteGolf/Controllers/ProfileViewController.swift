@@ -9,24 +9,50 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var user: User? = nil
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profilePicView: UIImageView!
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
-    let eventCellID = "EventCell"
-    let eventHeaderID = "EventHeader"
+    let eventCellID = "EventCellID"
+    let eventHeaderID = "EventHeaderID"
     
-    let eventTypes: [String] = ["Upcomming", "Joined"]
-    let events: [String: [String]] = ["Upcomming": ["practice", "provo invite", "utah champs"], "Joined": ["practice 2", "chicago cup"]]
+    var eventTypes: [String] = []
+    var events: [String: [Event]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let showUser = user {
+            nameLabel.text = showUser.FirstName + " " + showUser.LastName
+        }
+        else {
+            user = AppState.state.user
+            nameLabel.text = user!.FirstName + " " + user!.LastName
+        }
+        
         eventCollectionView.dataSource = self
         eventCollectionView.delegate = self
+        // register event cell and header cell
         eventCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
         eventCollectionView.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
+        loadEvents()
+    }
+    
+    // Loeads Events for uppcomming and Joined events
+    private func loadEvents() {
+        Event.GetUpcomingAndJoinedEventsWithUserID(UserID: user!.UserID) { (loadedEvents, message) in
+            if loadedEvents != nil {
+                self.eventTypes = Array(loadedEvents!.keys)
+                self.events = loadedEvents!
+                self.eventCollectionView.reloadData()
+            }
+            else {
+                print(message)
+            }
+        }
     }
     
     // Number of sections
@@ -37,7 +63,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     // Number of rows in section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let eventType = eventTypes[section]
-        return (events[eventType]?.count)!
+        return events[eventType]!.count
     }
     
     // Get the header for each section
@@ -55,9 +81,9 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         let eventCell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellID, for: indexPath) as! EventCollectionViewCell
         
         let eventType = eventTypes[indexPath.section]
-        let eventName = events[eventType]![indexPath.row]
+        let event = events[eventType]![indexPath.row]
         
-        eventCell.eventLabel.text = eventName
+        eventCell.eventLabel.text = event.EventName
         
         return eventCell
     }
@@ -75,10 +101,10 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     // Event cell was selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let eventType = eventTypes[indexPath.section]
-        let eventName = events[eventType]![indexPath.row]
+        let event = events[eventType]![indexPath.row]
         
         let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
-        eventVC.eventName = eventName
+        eventVC.eventName = event.EventName
         
         AppState.state.nav.pushViewController(eventVC, animated: true)
     }
