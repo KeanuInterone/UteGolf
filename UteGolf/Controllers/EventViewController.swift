@@ -11,8 +11,8 @@ import UIKit
 class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let roundCellID = "RoundCellID"
-    let rounds: [String] = ["Round1", "Round2", "Round3", "Round4"]
-    var eventName: String = ""
+    var rounds: [Round] = []
+    var event: Event? = nil
     
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -22,11 +22,24 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         edgesForExtendedLayout = []
-        eventNameLabel.text = eventName
+        eventNameLabel.text = event?.EventName
         
         roundsTabelView.dataSource = self
         roundsTabelView.delegate = self
         roundsTabelView.register(UITableViewCell.self, forCellReuseIdentifier: roundCellID)
+        loadRounds()
+    }
+    
+    private func loadRounds() {
+        Round.GetRoundsWithEventID(EventID: event!.EventID) { (loadedRounds, message) in
+            if loadedRounds != nil {
+                self.rounds = loadedRounds!
+                self.roundsTabelView.reloadData()
+            }
+            else {
+                print(message)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,17 +49,18 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: roundCellID, for: indexPath)
         
-        let roundName = rounds[indexPath.row]
-        cell.textLabel?.text = roundName
+        let round = rounds[indexPath.row]
+        cell.textLabel?.text = round.RoundName
         
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let roundName = rounds[indexPath.row]
+        
+        let round = rounds[indexPath.row]
         
         let roundVC = RoundViewController(nibName: "RoundViewController", bundle: nil)
-        roundVC.roundName = roundName
+        roundVC.roundName = round.RoundName
         
         AppState.state.nav.pushViewController(roundVC, animated: true)
     }

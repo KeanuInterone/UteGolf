@@ -93,7 +93,7 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         let event = events[eventType]![indexPath.row]
         
         let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
-        eventVC.eventName = event.EventName
+        eventVC.event = event
         
         AppState.state.nav.pushViewController(eventVC, animated: true)
     }

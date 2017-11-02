@@ -27,6 +27,7 @@
 		5E348CE11FA7928100A0D343 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E348CDF1FA7928100A0D343 /* EventViewController.xib */; };
 		5E348CE41FA8DC0200A0D343 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E348CE21FA8DC0200A0D343 /* RoundViewController.swift */; };
 		5E348CE51FA8DC0200A0D343 /* RoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E348CE31FA8DC0200A0D343 /* RoundViewController.xib */; };
+		5E387A2B1FAB6D2300D53D6A /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E387A2A1FAB6D2300D53D6A /* Round.swift */; };
 		5E39F3461F9E675F00E42A27 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3451F9E675F00E42A27 /* AppState.swift */; };
 		5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39F3491F9E7AB700E42A27 /* User.swift */; };
 		5E52EF3B1F98319A00C0A249 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52EF3A1F98319A00C0A249 /* EventCell.swift */; };
@@ -82,6 +83,7 @@
 		5E348CDF1FA7928100A0D343 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		5E348CE21FA8DC0200A0D343 /* RoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
 		5E348CE31FA8DC0200A0D343 /* RoundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundViewController.xib; sourceTree = "<group>"; };
+		5E387A2A1FAB6D2300D53D6A /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		5E39F3451F9E675F00E42A27 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5E39F3491F9E7AB700E42A27 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E52EF3A1F98319A00C0A249 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				5E39F3491F9E7AB700E42A27 /* User.swift */,
 				5EF007B21FAA5B3B0080DBA4 /* Event.swift */,
+				5E387A2A1FAB6D2300D53D6A /* Round.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				5E348CE41FA8DC0200A0D343 /* RoundViewController.swift in Sources */,
 				5E0292801FA50CD500219C20 /* ProfileViewController.swift in Sources */,
 				5E39F34A1F9E7AB700E42A27 /* User.swift in Sources */,
+				5E387A2B1FAB6D2300D53D6A /* Round.swift in Sources */,
 				5EF007B31FAA5B3B0080DBA4 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATFS7QJ49K;
 				INFOPLIST_FILE = UteGolf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KeanuCode.UteGolf;
@@ -738,6 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATFS7QJ49K;
 				INFOPLIST_FILE = UteGolf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KeanuCode.UteGolf;
