@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -33,12 +34,24 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             nameLabel.text = user!.FirstName + " " + user!.LastName
         }
         
+        profilePicView.contentMode = .scaleAspectFill
+        profilePicView.layer.cornerRadius = 8
+        profilePicView.clipsToBounds = true
+        
         eventCollectionView.dataSource = self
         eventCollectionView.delegate = self
         // register event cell and header cell
         eventCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
         eventCollectionView.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
         loadEvents()
+        loadProfilePic(filename: String(user!.UserID) + ".jpg")
+    }
+    
+    private func loadProfilePic(filename: String) {
+        Alamofire.request("https://www.utahutegolf.com/images/profilepics/" + filename).responseData { response in
+            let profilepic = UIImage(data: response.result.value!)
+            self.profilePicView.image = profilepic
+        }
     }
     
     // Loeads Events for uppcomming and Joined events
