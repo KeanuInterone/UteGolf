@@ -50,7 +50,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         roundsTabelView.dataSource = self
         roundsTabelView.delegate = self
-        roundsTabelView.register(UITableViewCell.self, forCellReuseIdentifier: roundCellID)
+//        roundsTabelView.register(UITableViewCell.self, forCellReuseIdentifier: roundCellID)
         if(hasJoined) {
             loadRounds()
         }
@@ -97,16 +97,27 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: roundCellID, for: indexPath)  
+        var cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")
+        if cell == nil {
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuseIdentifier")
+        }
         
         let round = rounds[indexPath.row]
-        cell.textLabel?.text = round.RoundName
-        return cell;
+        cell!.textLabel?.text = round.RoundName
+        var scoreString = "No Score"
+        if let score = round.Score {
+            scoreString = "Score: " + String(score)
+        }
+        cell!.detailTextLabel?.text = scoreString
+        return cell!;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let round = rounds[indexPath.row]
+        
+        // if it does not have a score then we can show the score form
+        // else we just show to the score results
         
         let roundVC = RoundViewController(nibName: "RoundViewController", bundle: nil)
         roundVC.roundName = round.RoundName
