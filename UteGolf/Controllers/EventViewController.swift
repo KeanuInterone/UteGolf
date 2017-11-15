@@ -40,6 +40,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         edgesForExtendedLayout = []
         eventNameLabel.text = event?.EventName
         
+        // either we need to show a join event button or show tableview of rounds
         if(hasJoined) {
             joinEventButton.isHidden = true;
         }
@@ -68,7 +69,27 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func joinEventButtonPressed(_ sender: Any) {
+        joinEventButton.isEnabled = false
         
+        // check if user has enough utepoints
+        if(AppState.state.user!.UtePoints < event!.EntryFee) {
+            // show alert
+            let alert = UIAlertController(title: "Not enough points", message: "You don't have enough points to join this event", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: {
+                self.joinEventButton.isEnabled = true;
+            })
+        }
+        else {
+            Event.joinEvent(userID: AppState.state.user!.UserID, eventID: event!.EventID, completion: { (success) in
+                if(success) {
+                    AppState.state.user!.UtePoints -= self.event!.EntryFee
+                    self.joinEventButton.isHidden = true
+                    self.roundsTabelView.isHidden = false
+                    self.loadRounds()
+                }
+            })
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

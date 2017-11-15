@@ -175,7 +175,21 @@ class Event {
         }
     }
     
-    public static func joinEvent(userID: Int, eventID: Int, entryFee: Double, completion: @escaping (String) -> ()) {
-        // implement the function to add a user to an Event
+    public static func joinEvent(userID: Int, eventID: Int, completion: @escaping (Bool) -> ()) {
+        
+        let parameters: Parameters = [
+            "userid": userID,
+            "eventid": eventID
+        ]
+        
+        Alamofire.request("https://www.utahutegolf.com/events/", method: .post, parameters: parameters).responseString { (message) in
+            if(message.result.value == "Success") {
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        }
+        
     }
 }

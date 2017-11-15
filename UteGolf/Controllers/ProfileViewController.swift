@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profilePicView: UIImageView!
+    @IBOutlet weak var utePointsLabel: UILabel!
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
     let eventCellID = "EventCellID"
@@ -30,11 +31,13 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         // If the user object was set we want to show that user
         if let showUser = user {
             nameLabel.text = showUser.FirstName + " " + showUser.LastName
+            utePointsLabel.text = "Ute Points: " + String(showUser.UtePoints)
             showingUser = true
         }
         else {
             user = AppState.state.user
             nameLabel.text = user!.FirstName + " " + user!.LastName
+            utePointsLabel.text = "Ute Points: " + String(user!.UtePoints)
         }
         
         profilePicView.contentMode = .scaleAspectFill
@@ -55,9 +58,10 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         }
         loadProfilePic(filename: String(user!.UserID) + ".jpg")
     }
-
-    @objc private func logout() {
-        
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadEvents()
+        utePointsLabel.text = "Ute Points: " + String(user!.UtePoints)
     }
     
     private func loadProfilePic(filename: String) {
@@ -66,6 +70,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             self.profilePicView.image = profilepic
         }
     }
+    
+    
     
     // Loeads Events for uppcomming and Joined events
     private func loadEvents() {
