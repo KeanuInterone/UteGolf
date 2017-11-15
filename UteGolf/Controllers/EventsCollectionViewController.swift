@@ -95,7 +95,11 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
         eventVC.event = event
         
-        AppState.state.nav.pushViewController(eventVC, animated: true)
+        if(eventType == "Past" || eventType == "Joined") {
+            eventVC.hasJoined = true
+        }
+        
+        AppState.state.nav!.pushViewController(eventVC, animated: true)
     }
 
     // MARK: UICollectionViewDelegate

@@ -15,6 +15,7 @@
                 <outlet property="eventImageView" destination="5fG-v5-U7a" id="czj-oB-zu7"/>
                 <outlet property="eventNameLabel" destination="e4G-mK-4Ve" id="EMu-QV-lZE"/>
                 <outlet property="eventPayoutLabel" destination="2fj-aL-m22" id="1i7-D0-i8r"/>
+                <outlet property="joinEventButton" destination="EDe-30-HI7" id="OJq-Cd-TIs"/>
                 <outlet property="roundsTabelView" destination="ID5-NY-3D9" id="HPG-yj-2st"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -50,16 +51,33 @@
                     <rect key="frame" x="0.0" y="296" width="375" height="371"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-30-HI7">
+                    <rect key="frame" x="16" y="296" width="343" height="42"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="343" id="5OK-i3-4rm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <state key="normal" title="Join Event">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="joinEventButtonPressed:" destination="-1" eventType="touchUpInside" id="nG3-LL-BBF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ID5-NY-3D9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0E8-xX-abx"/>
                 <constraint firstItem="e4G-mK-4Ve" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5kR-je-h9e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EDe-30-HI7" secondAttribute="trailing" constant="16" id="ERM-FF-4r8"/>
                 <constraint firstItem="2fj-aL-m22" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Gsy-CV-rct"/>
+                <constraint firstItem="EDe-30-HI7" firstAttribute="top" secondItem="2fj-aL-m22" secondAttribute="bottom" constant="24.5" id="JBR-hN-aAz"/>
                 <constraint firstItem="5fG-v5-U7a" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="JH4-pJ-Xb0"/>
                 <constraint firstItem="ID5-NY-3D9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rra-DS-k6s"/>
                 <constraint firstItem="e4G-mK-4Ve" firstAttribute="top" secondItem="5fG-v5-U7a" secondAttribute="bottom" constant="16" id="W4v-9q-cdA"/>
                 <constraint firstItem="5fG-v5-U7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XSy-ba-FSc"/>
+                <constraint firstItem="EDe-30-HI7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="agr-Oa-wKM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2fj-aL-m22" secondAttribute="trailing" id="dof-8h-wUE"/>
                 <constraint firstItem="2fj-aL-m22" firstAttribute="top" secondItem="e4G-mK-4Ve" secondAttribute="bottom" constant="5" id="ecc-Kk-J4A"/>
                 <constraint firstItem="5fG-v5-U7a" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="gLc-He-5fC"/>

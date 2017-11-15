@@ -12,6 +12,7 @@ import Alamofire
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var user: User? = nil
+    var showingUser: Bool = false
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profilePicView: UIImageView!
@@ -26,8 +27,10 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // If the user object was set we want to show that user
         if let showUser = user {
             nameLabel.text = showUser.FirstName + " " + showUser.LastName
+            showingUser = true
         }
         else {
             user = AppState.state.user
@@ -43,8 +46,18 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         // register event cell and header cell
         eventCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
         eventCollectionView.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
-        loadEvents()
+        
+        if(showingUser) {
+            loadCompletedEvents()
+        }
+        else {
+            loadEvents()
+        }
         loadProfilePic(filename: String(user!.UserID) + ".jpg")
+    }
+
+    @objc private func logout() {
+        
     }
     
     private func loadProfilePic(filename: String) {
@@ -66,6 +79,10 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
                 print(message)
             }
         }
+    }
+    
+    private func loadCompletedEvents() {
+        // this will get all of the completed events when showing a user
     }
     
     // Number of sections
@@ -116,9 +133,16 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         let eventType = eventTypes[indexPath.section]
         let event = events[eventType]![indexPath.row]
         
+        // we need to check here to see what state the event is in
+        // from that we can present the correct 
+        
         let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
         eventVC.event = event
         
-        AppState.state.nav.pushViewController(eventVC, animated: true)
+        if(eventType == "Joined") {
+            eventVC.hasJoined = true;
+        }
+        
+        AppState.state.nav!.pushViewController(eventVC, animated: true)
     }
 }

@@ -13,6 +13,11 @@ class ProfileTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Home"
+        
+        let logoutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logout))
+        navigationItem.setRightBarButton(logoutButton, animated: false)
+        
         let profileTab = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         profileTab.title = "Profile"
         let eventsTab = EventsCollectionViewController(nibName: "EventsCollectionViewController", bundle: nil)
@@ -20,6 +25,12 @@ class ProfileTabBarController: UITabBarController {
 
         
         setViewControllers([profileTab, eventsTab], animated: true)
+    }
+    
+    @objc private func logout() {
+        AppState.state.user = nil
+        AppState.state.nav = nil
+        self.present(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true, completion: nil)
     }
 
 }

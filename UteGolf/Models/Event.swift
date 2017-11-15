@@ -174,4 +174,8 @@ class Event {
             }
         }
     }
+    
+    public static func joinEvent(userID: Int, eventID: Int, entryFee: Double, completion: @escaping (String) -> ()) {
+        // implement the function to add a user to an Event
+    }
 }

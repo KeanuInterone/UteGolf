@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
         window?.rootViewController = loginVC
         
+        
+        
         return true
     }
 

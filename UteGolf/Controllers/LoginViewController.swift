@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             if let loginUser = user {
                 AppState.state.user = loginUser
                 AppState.state.nav = UINavigationController(rootViewController: ProfileTabBarController())
-                self.present(AppState.state.nav, animated: true, completion: nil)
+                self.present(AppState.state.nav!, animated: true, completion: nil)
             }
             else {
                 let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.alert)

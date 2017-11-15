@@ -11,13 +11,12 @@ import UIKit
 
 class AppState {
     
-    public var nav: UINavigationController
+    public var nav: UINavigationController?
     public var user: User?
     
     static let state: AppState = AppState()
     
     private init() {
-        nav = UINavigationController()
     }
     
 }

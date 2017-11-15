@@ -8,30 +8,55 @@
 
 import UIKit
 
+// the event view controller can be shown in a few states
+// 1.) user has not joined the event and the event is open
+//      - show a "Join Event" button
+// 2.) the use has joined the event and the event is open
+//      - lets the user see what scores they got on rounds
+// 3.) the event is closed
+//      - shows the results of the event (the leader board)
+//      - shows what scores they got on the rounds if they completed it
+
 class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var event: Event? = nil
+    var hasJoined: Bool = false
+    
     let roundCellID = "RoundCellID"
     var rounds: [Round] = []
-    var event: Event? = nil
     
+    
+    @IBOutlet weak var joinEventButton: UIButton!
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var eventPayoutLabel: UILabel!
     @IBOutlet weak var roundsTabelView: UITableView!
     
     override func viewDidLoad() {
+        
+        navigationItem.title = "Event"
+        
         super.viewDidLoad()
         edgesForExtendedLayout = []
         eventNameLabel.text = event?.EventName
         
+        if(hasJoined) {
+            joinEventButton.isHidden = true;
+        }
+        else {
+            roundsTabelView.isHidden = true;
+        }
+        
         roundsTabelView.dataSource = self
         roundsTabelView.delegate = self
         roundsTabelView.register(UITableViewCell.self, forCellReuseIdentifier: roundCellID)
-        loadRounds()
+        if(hasJoined) {
+            loadRounds()
+        }
     }
     
     private func loadRounds() {
-        Round.GetRoundsWithEventID(EventID: event!.EventID) { (loadedRounds, message) in
+        Round.GetRoundsWithEventID(EventID: event!.EventID, UserID: AppState.state.user!.UserID) { (loadedRounds, message) in
             if loadedRounds != nil {
                 self.rounds = loadedRounds!
                 self.roundsTabelView.reloadData()
@@ -42,16 +67,19 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    @IBAction func joinEventButtonPressed(_ sender: Any) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rounds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: roundCellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: roundCellID, for: indexPath)  
         
         let round = rounds[indexPath.row]
         cell.textLabel?.text = round.RoundName
-        
         return cell;
     }
     
@@ -62,7 +90,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         let roundVC = RoundViewController(nibName: "RoundViewController", bundle: nil)
         roundVC.roundName = round.RoundName
         
-        AppState.state.nav.pushViewController(roundVC, animated: true)
+        AppState.state.nav!.pushViewController(roundVC, animated: true)
     }
 
 }
