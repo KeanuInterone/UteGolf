@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+//        AppState.state.user = User(UserID: 1, FirstName: "Keanu", LastName: "Baggadicks", IsAdmin: "taha", Login: "usernam", UtePoints: 400000)
+//        window?.rootViewController = ProfileCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        
+        
         return true
     }
 

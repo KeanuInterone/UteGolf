@@ -39,6 +39,9 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         edgesForExtendedLayout = []
         eventNameLabel.text = event?.EventName
+        eventPayoutLabel.text = "Entry Fee: " + String(event!.EntryFee)
+        eventImageView.image = #imageLiteral(resourceName: "GolfCourse")
+        eventImageView.contentMode = .scaleAspectFill
         
         // either we need to show a join event button or show tableview of rounds
         if(hasJoined) {

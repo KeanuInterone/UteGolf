@@ -1,8 +1,8 @@
 //
-//  EventsCollectionViewController.swift
+//  ProfileCollectionViewController.swift
 //  UteGolf
 //
-//  Created by Keanu Interone on 10/29/17.
+//  Created by Keanu Interone on 11/21/17.
 //  Copyright © 2017 Keanu Interone. All rights reserved.
 //
 
@@ -10,66 +10,105 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class EventsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ProfileCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    
+    // MARK: cell ids
     let eventCellID = "EventCellID"
-    let eventHeaderID = "EventHeaderId"
+    let eventHeaderID = "EventHeaderID"
+    let profileHeaderID = "ProfileHeaderID"
     
+    // MARK: Event sections and event headers
     var eventTypes: [String] = []
     var events: [String: [Event]] = [:]
     
+    // MARK: User object
+    var user: User?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView?.backgroundColor = .white
         
-        self.collectionView!.backgroundColor = .white
+        user = AppState.state.user!
+        
+        // Set layout delegate to self
+        collectionView?.delegate = self
+        
         // Register cell classes
-        self.collectionView!.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
-        self.collectionView!.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
+        // Profile header cell
+        collectionView?.register(UINib(nibName: "ProfileHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: profileHeaderID)
+        // Event cell
+        collectionView!.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
+        // Event cell header
+        collectionView!.register(UINib(nibName: "EventHeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: eventHeaderID)
         loadEvents()
+
     }
-    
-    // Loeads Events for uppcomming and Joined events
+
+    // MARK: Loads Events for uppcomming and Joined events
+    // Loads Events for uppcomming and Joined events
     private func loadEvents() {
-        let user = AppState.state.user
-        Event.GetAllEventsWithUserID(UserID: user!.UserID) { (loadedEvents, message) in
+        Event.GetUpcomingAndJoinedEventsWithUserID(UserID: user!.UserID) { (loadedEvents, message) in
             if loadedEvents != nil {
                 self.eventTypes = Array(loadedEvents!.keys)
                 self.events = loadedEvents!
-                self.collectionView!.reloadData()
+                self.collectionView?.reloadData()
             }
             else {
                 print(message)
             }
         }
     }
-
+    
+    
     // Number of sections
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return eventTypes.count
+        return eventTypes.count + 1 // Plus 1 if for the profile header
     }
-
+    
+    
     // Number of items in section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let eventType = eventTypes[section]
+        // For section 0, return 0, because its just the header cell
+        let index = section - 1
+        if(index == -1) {
+            return 0;
+        }
+        let eventType = eventTypes[index]
         return (events[eventType]?.count)!
     }
-
+    
+    
     // Gets gets the headers for the sections
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if(indexPath.section == 0) {
+            let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: profileHeaderID, for: indexPath) as! ProfileHeaderCollectionViewCell
+            
+            profileHeader.nameLabel.text = user!.FirstName + " " + user!.LastName
+            profileHeader.pointsLabel.text = "Points: " + String(user!.UtePoints)
+            User.loadProfilePicture(UserID: user!.UserID, completion: { (data) in
+                let profileImage = UIImage(data: data)
+                profileHeader.profileImageView.image = profileImage
+            })
+            return profileHeader
+        }
+        
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: eventHeaderID, for: indexPath) as! EventHeaderCollectionViewCell
         
-        header.headerLabel.text = eventTypes[indexPath.section]
+        header.headerLabel.text = eventTypes[indexPath.section - 1]
         
         return header
     }
+    
     
     // Gets the event cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let eventCell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellID, for: indexPath) as! EventCollectionViewCell
         
-        let eventType = eventTypes[indexPath.section]
+        let eventType = eventTypes[indexPath.section - 1]
         let event = events[eventType]![indexPath.row]
         
         eventCell.eventLabel.text = event.EventName
@@ -78,8 +117,12 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
         return eventCell
     }
     
+    
     // Gets the size for the headers
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if(section == 0) {
+            return CGSize(width: collectionView.frame.width, height: 150)
+        }
         return CGSize(width: collectionView.frame.width, height: 30)
     }
     
@@ -90,7 +133,7 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
     
     // Event cell was selected
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let eventType = eventTypes[indexPath.section]
+        let eventType = eventTypes[indexPath.section - 1]
         let event = events[eventType]![indexPath.row]
         
         let eventVC = EventViewController(nibName: "EventViewController", bundle: nil)
@@ -100,8 +143,10 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
             eventVC.hasJoined = true
         }
         
+        
         AppState.state.nav!.pushViewController(eventVC, animated: true)
     }
+
 
     // MARK: UICollectionViewDelegate
 
@@ -133,5 +178,5 @@ class EventsCollectionViewController: UICollectionViewController, UICollectionVi
     
     }
     */
-    
+
 }

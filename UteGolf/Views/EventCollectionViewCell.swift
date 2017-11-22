@@ -16,6 +16,8 @@ class EventCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        eventImageView.contentMode = .scaleAspectFill
+        eventImageView.clipsToBounds = true
     }
 
 }

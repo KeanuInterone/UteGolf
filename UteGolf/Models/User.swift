@@ -34,7 +34,6 @@ class User {
             "password": Password
         ]
         
-        // All three of these calls are equivalent
         Alamofire.request("https://www.utahutegolf.com/users/", method: .post, parameters: parameters).responseJSON { response in
             
             if(response.result.isSuccess) {
@@ -59,6 +58,13 @@ class User {
                 completion(nil, (response.result.error?.localizedDescription)!)
             }
             
+        }
+    }
+    
+    public static func loadProfilePicture(UserID: Int, completion: @escaping (Data) -> ()) {
+        let filename =  String(UserID) + ".jpg"
+        Alamofire.request("https://www.utahutegolf.com/images/profilepics/" + filename).responseData { response in
+            completion(response.result.value!)
         }
     }
     
