@@ -18,7 +18,8 @@ class ProfileTabBarController: UITabBarController {
         let logoutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logout))
         navigationItem.setRightBarButton(logoutButton, animated: false)
         
-        let profileTab = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+//        let profileTab = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        let profileTab = ProfileCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         profileTab.title = "Profile"
         let eventsTab = EventsCollectionViewController(nibName: "EventsCollectionViewController", bundle: nil)
         eventsTab.title = "Events"

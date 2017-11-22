@@ -44,6 +44,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         profilePicView.layer.cornerRadius = 8
         profilePicView.clipsToBounds = true
         
+        
         eventCollectionView.dataSource = self
         eventCollectionView.delegate = self
         // register event cell and header cell
